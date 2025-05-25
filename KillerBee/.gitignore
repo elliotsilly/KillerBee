@@ -388,3 +388,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+#cheese
+bin/
+obj/
