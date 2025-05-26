@@ -1,4 +1,4 @@
-﻿using GorillaNetworking;
+using GorillaNetworking;
 using HarmonyLib;
 using Photon.Pun;
 using UnityEngine;
@@ -10,7 +10,8 @@ namespace KillerBee
     {
         public static void Postfix(AngryBeeSwarm __instance)
         {
-            if (__instance.currentState == AngryBeeSwarm.ChaseState.Grabbing && __instance.targetPlayer.UserId == PhotonNetwork.LocalPlayer.UserId)
+            if (__instance.currentState == AngryBeeSwarm.ChaseState.Grabbing &&
+                __instance.targetPlayer.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
             {
                 Application.Quit();
             }
